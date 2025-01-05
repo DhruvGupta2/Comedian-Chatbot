@@ -7,11 +7,7 @@ import os
 st.set_page_config(page_title="Conversational Q&A Chatbot")
 st.header("Hey, Let's Chat")
 
-# Load environment variables
-load_dotenv()
-
-# Fetch Gemini API key from environment variables
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # Check if the API key is available
 if not GEMINI_API_KEY:
